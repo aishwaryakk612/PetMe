@@ -1,0 +1,291 @@
+<html>
+<head>
+<style>
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #3c13f1;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+</style>
+</head>
+<body>
+<ul class="cards">
+  <li>
+    <a href="jaggu.html" class="card">
+      <img src="http://2.bp.blogspot.com/-u6TtYgIGQWA/UfA0VGKdwaI/AAAAAAAACXo/8h3-NEYnXGE/s640/fe57b79487f7156a2d2259ee1c247f5a.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+                          
+         
+          <div class="card__header-text">
+            <h3 class="card__title">JAGGU</h3>            
+           
+          </div>
+        </div>
+        <p class="card__description">Jaggu is sweet guy who would love home of his own.</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="toffu.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHKKTjWsLFmb6xbJ8Gis4jNKvAAM1PbAKXMLHj_O-gd3A714cRCWvBpPDXfhPII5VqCMc&usqp=CAU" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">TOFFU</h3>
+            
+          </div>
+        </div>
+        <p class="card__description">Chandu is a playful cat who is always enthusiastic</p>
+        
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="kaifa.html" class="card">
+      <img src="https://static.boredpanda.com/blog/wp-content/uploads/2020/08/german-shepherd-cute-puppies-117-5f30fa0f043fb__700.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">KAIFA</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Kaifa is looking for someone who would appreciate her for being that amazing cute girl.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="tommy.html" class="card">
+      <img src="https://i.pinimg.com/originals/b9/1d/9f/b91d9fdea42e8cff2370bf83c199e60e.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">TOMMY</h3>
+            
+          </div>          
+        </div>
+        <p class="card__description">Tommy is housebroken, crate-trained and not destructive.</p>
+      </div>
+    </a>
+  </li> 
+  <li>
+    <a href="ringo.html" class="card">
+      <img src="https://i.guim.co.uk/img/media/b31c87c499d04a01f4d630363c8b062f6da6a3cc/0_102_3103_1862/master/3103.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1d61499981241d85b59070c3a5363ac5" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">RINGO</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Ringo has a very sweet temperament and is a very calm dog.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="zola.html" class="card">
+      <img src="https://i.pinimg.com/originals/80/d3/64/80d364e09d31fcba8af274926d4332ff.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">ZOLA</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Zola is a young and active dog that loves going for walks but is also pretty calm and well-behaved in the house</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="sweety.html" class="card">
+      <img src="https://marvel-b1-cdn.bc0a.com/f00000000052994/www.hillspet.com/content/dam/cp-sites/hills/hills-pet/en_us/exported/dog-care/Skyword/images/azawakh-dog-standing-on-path-SW.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">SWEETY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Sweety is a very sweet and friendly dog - her tail doesn’t stop wagging and she greets people with a big smile and puppy kisses. </p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="pappu.html" class="card">
+      <img src="https://images.adoist.com/classified-images/001/073/690/4365898/photo_purebred-siberian-husky-puppies_35434735.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">PAPPU</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Pappu is always playful.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="Sweety.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWEN_B8ez1tTfUUv1mQei0qJawwSlDSve4lOd77kFbEXYSZTRX5-9FU4R4GBT50q5DTE&usqp=CAU" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">SWEETY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Sweety is same as her name.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="jassi.html" class="card">
+      <img src="https://cdn.statically.io/img/blazepress.com/.image/2020/08/German-Shepherd-Puppies-1-1-374x500.jpg?quality=100&f=auto" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">JASSI/h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Jassi always smiling, and with her cute personality she makes everyone smile right back.</p>
+      </div>
+    </a>
+  </li>
+     
+  
+</ul>
+</body>
+</html>
+

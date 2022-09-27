@@ -1,0 +1,290 @@
+<html>
+<head>
+<style>
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #3c13f1;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+</style>
+</head>
+<body>
+<ul class="cards">
+  <li>
+    <a href="" class="card">
+      <img src="https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+                          
+         
+          <div class="card__header-text">
+            <h3 class="card__title">TUFFY</h3>            
+           
+          </div>
+        </div>
+        <p class="card__description">Tuffy is sweet girl who loves to play.</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="chandu.html" class="card">
+      <img src="https://images.unsplash.com/photo-1583083527882-4bee9aba2eea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">CHANDU</h3>
+            
+          </div>
+        </div>
+        <p class="card__description">Chandu is a playful cat who is always enthusiastic</p>
+        
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="Candy.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcwKU3vmP9_2hzIBoxHTTQIQIuEoAc3VZ8LGepH-rAv__9a_QuIJkc3M70h2r0e4EWF4Q&usqp=CAU" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">CANDY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Candy is looking for someone who would appreciate her for being always playful.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="sofy.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">SOFY</h3>
+            
+          </div>          
+        </div>
+        <p class="card__description">Sofy has sweet innocent eyes that will melt your heart.</p>
+      </div>
+    </a>
+  </li> 
+  <li>
+    <a href="manni.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2AbER05A8uZcuREhki3znLRx1XPfh1CzPqQ&usqp=CAU" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">MANNY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Manni is cute and naughty both.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="grumpy.html" class="card">
+      <img src="https://m.media-amazon.com/images/I/61KzsIZ78oL._AC_SX425_.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">GRUMPY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Grumpy is always on the verge to pick fights with other cats</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="Teddy.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Feral_cat_Virginia_crop.jpg/800px-Feral_cat_Virginia_crop.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">TEDDY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Teddy is looking for someone who would appreciate her for being always playful.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="pappu.html" class="card">
+      <img src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">PAPPU</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Pappu is always playful.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="Sweety.html" class="card">
+      <img src="https://media.istockphoto.com/photos/grey-stripped-mixedbreed-cat-sitting-isolated-on-white-picture-id1217828258?k=20&m=1217828258&s=612x612&w=0&h=2qMM0y95RyJm0f_CyTYjm-MqDrwNLrApsdxaarb5prg=" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">SWEETY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Sweety is same as her name.</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="putty.html" class="card">
+      <img src="https://envato-shoebox-0.imgix.net/a909/49dd-39fd-4f79-9594-a6ca7da022a2/2017_041_006_519.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=95f2a1e5d79f844626188a5603009e47" class="card__image" alt=""  />
+      <div class="card__overlay">
+        <div class="card__header">
+         
+          <div class="card__header-text">
+            <h3 class="card__title">PUTTY</h3>
+                     
+           
+          </div>
+        </div>
+        <p class="card__description">Putty is looking for someone who would appreciate her for being always playful.</p>
+      </div>
+    </a>
+  </li>
+     
+  
+</ul>
+</body>
+</html>
